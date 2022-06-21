@@ -1,0 +1,16 @@
+{
+  "name": "dowk-todo-project",
+  "version": "0.1.0",
+  "description": "Simple (?) project for Devops with Kubernetes course",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jonkur",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  }
+}
