@@ -1,0 +1,6 @@
+Deploying the logoutput app to a cluster:
+  -Make sure Docker, k3d and kubectl are installed
+  -Init a cluster with two agent nodes with "k3d cluster create -a 2"
+  -Create a new deployment with the logoutput app with "kubectl create deployment logoutput-dep --image=jkur00/logoutput"
+  -Get the name of the generated pod from the output of "kubectl get pods"
+  -Stream the stdout from the pod running the app with "kubectl logs -f <pod name>"
