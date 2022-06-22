@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dowkproj-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dowkproj
+  template:
+    metadata:
+      labels:
+        app: dowkproj
+    spec:
+      containers:
+        -  name: dowkproj
+           image: jkur00/dowkproj:0.2
