@@ -1,0 +1,4 @@
+Node app outputting the wanted string created. 
+Port can be assigned with the PORT environment variable.
+Docker image created and uploaded to Dockerhub.
+Image runs in a Kubernetes cluster with create deployment command.
