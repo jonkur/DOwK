@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         -  name: dowkproj
-           image: jkur00/dowkproj:0.3
+           image: jkur00/dowkproj:latest
