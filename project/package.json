@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node build/index.js",
     "tsc": "tsc",
+    "build": "tsc && cp -r ./src/static/ ./build/static/",
     "ts-node": "ts-node",
     "dev": "ts-node-dev src/index.ts",
     "lint": "eslint --ext .ts .",
