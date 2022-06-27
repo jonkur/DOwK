@@ -1,0 +1,9 @@
+Project now has a service.yaml manifest that can be used to start a NodePort service.
+First make sure that the cluster is running and some host port (8082 for example) is forwarded to the port 30085 on one of the agent nodes. 
+(Using k3d node edit --port-add on the running loadbalancer instance also seems to work fine).
+Then apply the deployment, if not already deployed, with
+  kubectl apply -f manifests/deployment.yaml
+Then apply the service we just created with
+  kubectl apply -f manifests/service.yaml
+  
+App should now be reachable at localhost:<host port you picked>
