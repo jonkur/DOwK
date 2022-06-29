@@ -1,6 +1,6 @@
 {
   "name": "dowk-todo-project",
-  "version": "0.3.0",
+  "version": "0.5.0",
   "description": "Simple (?) project for Devops with Kubernetes course",
   "main": "index.js",
   "scripts": {
