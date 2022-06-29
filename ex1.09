@@ -1,0 +1,9 @@
+First make sure that a k3d cluster is up and there is some port that forwards to port 80, look at ex1.07 or ex1.08
+
+Then spin up the pingpong app with kubectl:
+  kubectl apply -f pingpongapp/manifests/
+  
+Then the logoutput app:
+  kubectl apply -f logoutput/manifests/
+  
+The logouput app should now run in localhost:<cluster port> and the pingpong app should run in localhost:<cluster port>/pingpong

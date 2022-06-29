@@ -1,3 +1,4 @@
+#This ingress is shared between logoutput and pingpong apps
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -13,3 +14,10 @@ spec:
             name: logoutput-svc
             port: 
               number: 3005 # Same as port in service.yaml
+      - pathType: Prefix
+        path: "/pingpong"
+        backend:
+          service:
+            name: pingpongapp-svc
+            port:
+              number: 3003 # Same as in service.yaml of pingpongapp
