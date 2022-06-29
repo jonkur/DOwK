@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: logoutput-svc
+spec:
+  type: ClusterIP
+  selector:
+    app: logoutput
+  ports:
+  - port: 3005
+    protocol: TCP
+    targetPort: 3000 # Port designated for the app, 3000 is default

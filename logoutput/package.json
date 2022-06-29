@@ -1,6 +1,6 @@
 {
   "name": "logoutput",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
     "uuid": "^8.3.2"
   }
 }

@@ -1,0 +1,7 @@
+First make sure that a k3d cluster is running, and that some port is forwarded to 80@loadbalancer node. For example:
+  k3d cluster create --port 8082:30080@agent:0 -p 8081:80@loadbalancer --agents 2
+
+Then simply start the deployment, service and ingress for the logoutput app with:
+  kubectl apply -f logoutput/manifests/
+  
+App should now be running at port 8081 (or whatver port you chose to forward to 80).
