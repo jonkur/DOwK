@@ -9,4 +9,4 @@ spec:
   ports:
   - port: 3003
     protocol: TCP
-    targetPort: 3000  # Change to whatever is delcared by process.env.PORT if needed
+    targetPort: 3006  # Change to whatever is delcared by process.env.PORT if needed
