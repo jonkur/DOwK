@@ -1,0 +1,5 @@
+Logoutput app has now been split to two different apps running on the same pod.
+The other generates and saves the timestamp, and the the other responds with the latest timestamp upon GET request to /.
+Make sure there is a k3d cluster running and set up with some <port> forwarding to 80 and start simply with
+  kubectl apply -f manifests/
+in the logoutput folder.
