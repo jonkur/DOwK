@@ -12,6 +12,14 @@ spec:
       labels:
         app: dowkproj
     spec:
+      volumes:
+      - name: dowkproj-image
+        persistentVolumeClaim:
+          claimName: dowkproject-claim
       containers:
         -  name: dowkproj
-           image: jkur00/dowkproj:0.5
+           image: jkur00/dowkproj:0.7
+           volumeMounts:
+             - mountPath: /usr/src/kwbProjApp/files # Default for the app, make sure it matches
+               name: dowkproj-image
+
