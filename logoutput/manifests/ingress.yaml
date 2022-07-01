@@ -11,9 +11,9 @@ spec:
         path: "/"
         backend:
           service:
-            name: logoutput-svc
+            name: logoutput-reader-svc
             port: 
-              number: 3005 # Same as port in service.yaml
+              number: 3005 # Same as port in service.yaml for logoutput-reader
       - pathType: Prefix
         path: "/pingpong"
         backend:

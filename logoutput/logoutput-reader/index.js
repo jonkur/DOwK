@@ -39,6 +39,7 @@ const readLastLogEntry = async () => {
 app.get('/', async (req, res) => {
 	try {
 		const lastLogLine = await readLastLogEntry()
+		console.log('Responding with log line: ', lastLogLine)
 		return res.send(lastLogLine)
 	} catch (err) {
 		console.log(err)

@@ -12,6 +12,17 @@ spec:
       labels:
         app: logoutput
     spec:
+      volumes:
+        - name: shared-logoutput
+          emptyDir: {}
       containers:
-      - name: logoutput
-        image: jkur00/logoutput:1.0.2
+      - name: logoutput-generator
+        image: jkur00/logoutput-generator:1.0.3
+        volumeMounts:
+          - name: shared-logoutput
+            mountPath: /usr/src/app/logs # default directory to use for both apps
+      - name: logoutput-reader
+        image: jkur00/logoutput-reader:1.0.3
+        volumeMounts:
+          - name: shared-logoutput
+            mountPath: /usr/src/app/logs # default directory to use for both apps
