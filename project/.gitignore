@@ -132,5 +132,7 @@ dist
 # build folder
 /build
 
-# Temp store folder
+# Temp store folder and public folders from static
 STORE
+/src/static/public
+/build/static/public
