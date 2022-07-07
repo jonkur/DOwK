@@ -43,9 +43,13 @@ fs.access(counterDir, (err) => {
 })
 
 app.get('/pingpong', (req, res) => {
-  res.send(`pong ${pongCounter}`)
   pongCounter += 1
+  res.send(`pong ${pongCounter}`)
   updateCountInFile()
+})
+
+app.get('/numPongs', (req, res) => {
+  res.status(200).send(pongCounter.toString())
 })
 
 app.listen(PORT, () => {

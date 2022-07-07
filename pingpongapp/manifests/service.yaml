@@ -7,6 +7,7 @@ spec:
   selector:
     app: pingpongapp
   ports:
-  - port: 3003
+  - name: http
+    port: 80
     protocol: TCP
     targetPort: 3006  # Change to whatever is delcared by process.env.PORT if needed

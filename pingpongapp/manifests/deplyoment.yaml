@@ -12,13 +12,6 @@ spec:
       labels:
         app: pingpongapp
     spec:
-      volumes:
-          - name: shared-logoutput
-            persistentVolumeClaim:
-              claimName: logoutput-claim
       containers:
       - name: pingpongapp
-        image: jkur00/pingpongapp:0.1.5
-        volumeMounts:
-          - mountPath: /usr/src/app/logs
-            name: shared-logoutput
+        image: jkur00/pingpongapp:0.1.6

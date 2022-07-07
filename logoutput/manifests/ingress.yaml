@@ -20,4 +20,4 @@ spec:
           service:
             name: pingpongapp-svc
             port:
-              number: 3003 # Same as in service.yaml of pingpongapp
+              number: 80 # Same as in service.yaml of pingpongapp
