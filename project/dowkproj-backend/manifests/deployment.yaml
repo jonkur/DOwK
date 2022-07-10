@@ -1,25 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dowkproj-dep
+  name: dowkproj-backend-dep
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: dowkproj
+      app: dowkproj-backend
   template:
     metadata:
       labels:
-        app: dowkproj
+        app: dowkproj-backend
     spec:
       volumes:
       - name: dowkproj-image
         persistentVolumeClaim:
           claimName: dowkproject-claim
       containers:
-        -  name: dowkproj
-           image: jkur00/dowkproj:0.7
+        -  name: dowkproj-backend
+           image: jkur00/dowkproj-backend:1.0.0
            volumeMounts:
              - mountPath: /usr/src/kwbProjApp/files # Default for the app, make sure it matches
                name: dowkproj-image
-

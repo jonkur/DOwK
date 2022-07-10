@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dowkproj-frontend-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dowkproj-frontend
+  template:
+    metadata:
+      labels:
+        app: dowkproj-frontend
+    spec:
+      containers:
+        -  name: dowkproj-frontend
+           image: jkur00/dowkproj-frontend:1.0.0
+           env:
+           - name: VITE_BACKEND_URL
+             value: 'http://localhost:8081/API'
+

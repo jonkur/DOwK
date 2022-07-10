@@ -1,0 +1,11 @@
+Start a cluster and create a store inside with
+  k3d cluster create --port 8082:30080@agent:0 -p 8081:80@loadbalancer --agents 2
+  docker exec k3d-k3s-default-agent-0 mkdir -p /tmp/kube
+  
+Then spin up the frontend and backend deployments with
+  kubectl apply -f project/dowkproj-frontend/manifests/
+  kubectl apply -f project/dowkproj-backend/manifests/
+  
+Frontend is now running at http://localhost:8081
+API calls to http:localhots:8081/API/ are routed by the ingress to the backend application.
+Todo adding and fetching works, as well as image fetching.
